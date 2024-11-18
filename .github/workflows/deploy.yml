@@ -1,0 +1,34 @@
+name: Deploy React app to FTP server
+
+on:
+  push:
+    branches:
+      - main  # Zmodyfikuj, aby uruchamiało się dla odpowiedniej gałęzi
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Zmienna w zależności od wersji Node.js, której używasz
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React project
+        run: npm run build
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build  # Ścieżka do katalogu build z aplikacją React
+          remote-dir: /public_html/new  # Ścieżka na serwerze, do której chcesz wysłać pliki
