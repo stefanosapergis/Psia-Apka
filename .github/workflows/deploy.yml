@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build  # Ścieżka do katalogu build z aplikacją React
-          remote-dir: /public_html/new  # Ścieżka na serwerze, do której chcesz wysłać pliki
+          remote-dir: /public_html/new/  # Ścieżka na serwerze, do której chcesz wysłać pliki
