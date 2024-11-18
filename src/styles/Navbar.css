@@ -1,0 +1,58 @@
+/* src/styles/Navbar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .language-switcher {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .language-dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+  
+  .language-dropdown div {
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .language-dropdown div:hover {
+    background-color: #555;
+  }
+  

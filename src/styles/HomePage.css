@@ -1,0 +1,212 @@
+/* src/styles/HomePage.css */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #f4f4f4; /* Light gray background for the body */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Homepage Content Section */
+.homepage-content {
+  padding: 50px 30px;
+  color: white;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  animation: gradientAnimation 30s ease infinite; /* Smooth continuous gradient transition */
+  background: linear-gradient(90deg, #2e8b57, #3cb371, #00bfff, #1e90ff, #006400); /* Gradient with various shades of green and blue */
+  background-size: 400% 400%; /* Ensures the gradient expands and shifts */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Heading and Paragraph Styling */
+.homepage-content h2 {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.homepage-content p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin: 10px 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #f1f1f1;
+  font-weight: 400;
+  padding: 0 20px;
+}
+
+/* Feature List Styles */
+.homepage-content .feature-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1em;
+  margin-top: 30px;
+}
+
+.homepage-content .feature-list li {
+  margin-bottom: 20px;
+  color: #f1f1f1;
+  font-weight: 500;
+}
+
+.homepage-content .feature-list li::before {
+  content: "✔️ ";
+  color: #00bfff; /* Blue check mark */
+  font-size: 1.5em;
+}
+
+/* Call to Action Link */
+.homepage-content a {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.homepage-content a:hover {
+  text-decoration: underline;
+}
+
+/* Call-to-Action Button Styles */
+.homepage-content .cta-button {
+  margin-top: 20px;
+  padding: 15px 25px;
+  background-color: #1e90ff;
+  color: white;
+  border-radius: 50px;
+  font-size: 1.4em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.homepage-content .cta-button:hover {
+  background-color: #006400;
+  transform: scale(1.1);
+}
+
+/* Video Section Styles */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between video and button */
+  margin-top: 50px;
+}
+
+.phone-frame {
+  position: relative;
+  width: 320px;
+  height: 570px;
+  border-radius: 30px;
+  border: 8px solid #ccc;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.mobile-video {
+  width: 100%;
+  height: 100%;
+}
+
+.youtube-button {
+  background-color: #ff0000;
+  color: white;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.youtube-button:hover {
+  background-color: #cc0000;
+}
+/* Navbar and Language Switcher Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #2e8b57;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .language-switch {
+    position: relative;
+  }
+  
+  .language-button {
+    background-color: #3cb371;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .language-button:hover {
+    background-color: #2e8b57;
+  }
+  
+  .language-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2e8b57;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .language-switch:hover .language-options {
+    display: block;
+  }
+  
+  .language-options button {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .language-options button:hover {
+    background-color: #3cb371;
+  }
+  

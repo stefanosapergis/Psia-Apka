@@ -1,0 +1,110 @@
+/* Navbar styles */
+nav {
+    background-color: #18242e;
+    padding: 1em 4em; /* Adjusted padding to push items further from the edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #005bb5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Centers the navbar content */
+    align-items: center;
+  }
+  
+  /* Navbar links container */
+  .nav-links {
+    display: flex;
+    gap: 1em; /* Space between the navbar items */
+    align-items: center;
+  }
+  
+  /* Navbar links */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
+  
+  /* Hover effects on links */
+  nav a:hover {
+    color: #fff;
+    background-color: #ffcc00;
+    transform: scale(1.1);
+  }
+  
+  /* Active link */
+  nav a.active {
+    background-color: #ffcc00;
+    color: #18242e;
+    font-weight: 700;
+  }
+  
+  /* Language Switcher */
+/* Styles for the language switcher dropdown */
+.language-switch {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .language-button {
+    background-color: #ffcc00; /* Button color matching the navbar */
+    color: #18242e; /* Text color */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .language-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #18242e; /* Dark background for visibility */
+    border: 1px solid #ffcc00; /* Border for better contrast */
+    border-radius: 5px;
+    padding: 5px 0;
+    min-width: 80px;
+    z-index: 10;
+  }
+  
+  .language-switch:hover .language-options {
+    display: block; /* Show dropdown on hover */
+  }
+  
+  .language-options button {
+    background-color: transparent;
+    color: #ffcc00; /* Bright text color for visibility */
+    border: none;
+    padding: 8px 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .language-options button:hover {
+    background-color: #ffcc00; /* Highlight background on hover */
+    color: #18242e; /* Text color for hover */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    nav {
+      padding: 1em 2em; /* Adjusted padding for mobile */
+    }
+    
+    nav a {
+      margin: 0 0.5em; /* Reduced margin further on mobile */
+      font-size: 1em;
+    }
+  }
+  
